@@ -14,8 +14,6 @@ jobs:
           api_token: ${{ secrets.GARNET_API_TOKEN }}
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: latest
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -23,3 +21,4 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
+
